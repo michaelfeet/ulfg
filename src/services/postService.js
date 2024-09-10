@@ -1,10 +1,12 @@
 import * as tokenService from './tokenService.js';
 
 const BACKEND_URL = 'http://localhost:3000';
+// const BACKEND_URL = '/posts';
 
 const addPost = async (formData) => {
     try {
         const responseFromServer = await fetch(`${BACKEND_URL}/posts`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}`, {
             method: 'POST',
             body: formData,
             headers: {
@@ -23,7 +25,8 @@ const addPost = async (formData) => {
 
 const getPosts = async() => {
     try{
-        const responseFromServer = await fetch(`${BACKEND_URL}/posts`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/posts`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}`, {
             method: 'GET'
         });
         const dataFromServer = await responseFromServer.json();
@@ -35,7 +38,8 @@ const getPosts = async() => {
 }
 const getOnePost = async(postId) =>{
     try{
-        const responseFromServer = await fetch(`${BACKEND_URL}/posts/${postId}`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/posts/${postId}`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}/${postId}`, {
             method:'GET',
             Authorization: 'Bearer ' + tokenService.getToken
         });
@@ -48,7 +52,8 @@ const getOnePost = async(postId) =>{
 
 const deletePost = async(postId) => {
     try{
-        const responseFromServer = await fetch(`${BACKEND_URL}/posts/${postId}`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/posts/${postId}`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}/${postId}`, {
             method: 'DELETE',
             headers: {
                 Authorization: "Bearer " + tokenService.getToken()

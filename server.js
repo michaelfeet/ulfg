@@ -19,6 +19,7 @@ app.use(express.json());
 app.use('/users', userRouter);
 app.use('/posts', postRouter)
 
-app.listen(3000, () => {
-    console.log('The express app is running');
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log(`The express app is running on port ${port}`);
 });

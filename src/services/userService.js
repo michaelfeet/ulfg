@@ -1,6 +1,7 @@
 import * as tokenService from './tokenService.js';
 
 const BACKEND_URL = 'http://localhost:3000';
+// const BACKEND_URL = '/users';
 
 const getUser = () => {
     const token = tokenService.getToken();
@@ -13,7 +14,8 @@ const getUser = () => {
 
 const getProfileUser = async (username) => {
     try {
-        const responseFromServer = await fetch(`${BACKEND_URL}/users/user/${username}`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/users/user/${username}`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}/user/${username}`, {
             method: 'GET'
         });
         const dataFromServer = await responseFromServer.json();
@@ -28,7 +30,8 @@ const getProfileUser = async (username) => {
 
 const signup = async (form) => {
     try {
-        const responseFromServer = await fetch(`${BACKEND_URL}/users/signup`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/users/signup`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}/signup`, {
             method: 'POST',
             body: form
         });
@@ -48,7 +51,8 @@ const signup = async (form) => {
 
 const signin = async (form) => {
     try {
-        const responseFromServer = await fetch(`${BACKEND_URL}/users/signin`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/users/signin`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}/signin`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
