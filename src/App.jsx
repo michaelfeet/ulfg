@@ -19,7 +19,7 @@ const App = () => {
 	const handleLogOut = () => {
 		userService.signout();
 		setUser(userService.getUser());
-		navigate('/signup');
+		navigate('/');
 	}
 	return (
 		<ThemeProvider theme={appTheme}>
