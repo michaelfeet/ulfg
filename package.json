@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
-    "build": "npm install --prefix ./  && npm run build --prefix ./ && npm install"
+    "build": "npm install  && npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
