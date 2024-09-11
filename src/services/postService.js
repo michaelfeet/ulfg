@@ -1,12 +1,12 @@
 import * as tokenService from './tokenService.js';
 
-const BACKEND_URL = 'http://localhost:3000';
-// const BACKEND_URL = '/posts';
+// const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = '/posts';
 
 const addPost = async (formData) => {
     try {
-        const responseFromServer = await fetch(`${BACKEND_URL}/posts`, {
-        // const responseFromServer = await fetch(`${BACKEND_URL}`, {
+        // const responseFromServer = await fetch(`${BACKEND_URL}/posts`, {
+        const responseFromServer = await fetch(`${BACKEND_URL}`, {
             method: 'POST',
             body: formData,
             headers: {

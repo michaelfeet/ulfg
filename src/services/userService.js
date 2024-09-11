@@ -1,7 +1,7 @@
 import * as tokenService from './tokenService.js';
 
-const BACKEND_URL = 'http://localhost:3000';
-// const BACKEND_URL = '/users';
+// const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = '/users';
 
 const getUser = () => {
     const token = tokenService.getToken();

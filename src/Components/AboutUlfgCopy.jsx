@@ -4,7 +4,7 @@ import { AboutUlfgCopyTheme } from "./themes/aboutUlfgCopyTheme"
 export const AboutUlfgCopy = () => {
     return (
         <ThemeProvider theme={AboutUlfgCopyTheme}>
-            <Container fixed maxWidth='xl'>
+            <Container fixed maxWidth='md'>
                 <CssBaseline />
                 <Box sx={{ pb: 10 }}>
                     <Typography variant="h3">

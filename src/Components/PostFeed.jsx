@@ -8,7 +8,7 @@ export const PostFeed = (props) => {
     return (
         <Container fixed maxWidth='md'>
             <CssBaseline />
-            <Box sx={{ mt: 6, mb: 25, ...outerBox }}>
+            <Box sx={{ ...outerBox, mt: 6, mb: 25 }}>
                 <PostFeedNav setPostIndex={props.setPostIndex} postIndex={props.postIndex} posts={props.posts} />
                 {!props.posts
                     ? <Loading loading={props.loading} />

@@ -18,7 +18,7 @@ const App = () => {
 	const [loading, setLoading] = useState(false);
 	const handleLogOut = () => {
 		userService.signout();
-		setUser(userService.getUser())
+		setUser(userService.getUser());
 		navigate('/signup');
 	}
 	return (

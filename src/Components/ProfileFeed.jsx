@@ -1,7 +1,6 @@
 import { Box, Container, CssBaseline } from "@mui/material";
 import { Loading } from "./Loading";
 import { ProfileFeedImageList } from "./ProfileFeedImageList";
-import { outerBox } from "./StyledComponents/OuterBox";
 
 export const ProfileFeed = (props) => {
     return (

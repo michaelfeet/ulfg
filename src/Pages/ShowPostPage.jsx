@@ -13,7 +13,7 @@ export const ShowPostPage = (props) => {
             props.setLoading(true)
             const data = await postService.getOnePost(id);
             setPost(data.post);
-            props.setLoading(false)
+            props.setLoading(false);
         } catch (err) {
             console.log(err);
         }
