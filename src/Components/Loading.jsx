@@ -7,7 +7,8 @@ export const Loading = (props) => {
                 ? <Box sx={{ display: 'flex' }}>
                     <CircularProgress />
                 </Box>
-                : null}
+                : null
+            }
         </>
     );
 }

@@ -12,7 +12,8 @@ export const ShowPost = (props) => {
                 <Box sx={{ mt: 6, mb: 10, ...outerBox }}>
                     {!props.post.user
                         ? <Loading loading={props.loading} />
-                        : <ShowPostTernary post={props.post} user={props.user} />}
+                        : <ShowPostTernary post={props.post} user={props.user} />
+                    }
                 </Box>
             </Container>
         </ThemeProvider>

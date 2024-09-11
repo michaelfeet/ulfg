@@ -6,7 +6,8 @@ export const SignInPage = (props) => {
         <>
             {props.user
                 ? <Navigate to='/' />
-                : <SignInForm user={props.user} setUser={props.setUser} loading={props.loading} setLoading={props.setLoading} />}
+                : <SignInForm user={props.user} setUser={props.setUser} loading={props.loading} setLoading={props.setLoading} />
+            }
         </>
     )
 }

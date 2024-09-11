@@ -1,3 +1,4 @@
+import './App.css'
 import { useState } from 'react';
 import { ThemeProvider } from '@mui/material';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
@@ -11,7 +12,6 @@ import { AboutUlfgPage } from './Pages/AboutUlfgPage';
 import { AboutMePage } from './Pages/AboutMePage';
 import { ShowPostPage } from './Pages/ShowPostPage';
 import { appTheme } from './Components/themes/appTheme';
-import './App.css'
 
 const App = () => {
 	const navigate = useNavigate();
