@@ -9,7 +9,7 @@ export const ShowPost = (props) => {
         <ThemeProvider theme={showPostCompareTheme}>
             <Container fixed maxWidth='xl'>
                 <CssBaseline />
-                <Box sx={{ mt: 6, ...outerBox }}>
+                <Box sx={{ mt: 6, mb: 10, ...outerBox }}>
                     {!props.post.user
                         ? <Loading loading={props.loading} />
                         : <ShowPostTernary post={props.post} user={props.user} />}

@@ -28,17 +28,6 @@ const userSchema = new mongoose.Schema({
     },
     photoUrl: {
         type: String,
-        // required: [true, 'Please submit a Profile Photo'],
-        // validate: {
-        //     validator: () => {
-        //         console.log(value, 'VALUE')
-        //         if(value) {
-        //             return
-        //         }
-        //     },
-        //     // message: 'please submit a photo'
-        //     error: 'please submit a photo'
-        // }
     },
     time: { type: Date, default: Date.now }
 });
