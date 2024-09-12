@@ -42,12 +42,12 @@ export const AboutUlfgCopy = () => {
                             </ListItem>
                         </List>
                         This project not only serves as a creative outlet but also as a showcase of my skills in web development. It’s designed to demonstrate my ability to build and manage a comprehensive web application, integrating various technologies to deliver a seamless and engaging user experience. Find out more about me
-                        <Link href='/aboutme' underline="none">
+                        <Link href='/aboutme' underline="hover">
                             <span>&nbsp;here.</span>
                         </Link>
                     </Typography>
                 </Box>
             </Container>
         </ThemeProvider>
-    )
+    );
 }

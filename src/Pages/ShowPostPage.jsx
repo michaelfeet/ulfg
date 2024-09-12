@@ -16,6 +16,7 @@ export const ShowPostPage = (props) => {
             props.setLoading(false);
         } catch (err) {
             console.log(err);
+            props.setLoading(false);
         }
     }
     useEffect(() => {

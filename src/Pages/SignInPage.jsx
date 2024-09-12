@@ -9,5 +9,5 @@ export const SignInPage = (props) => {
                 : <SignInForm user={props.user} setUser={props.setUser} loading={props.loading} setLoading={props.setLoading} />
             }
         </>
-    )
+    );
 }

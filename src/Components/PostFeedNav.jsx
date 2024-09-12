@@ -18,31 +18,29 @@ export const PostFeedNav = (props) => {
         props.setPostIndex(randomNum);
     }
     return (
-        <>
-            <ThemeProvider theme={postFeedNavTheme}>
-                <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' }, alignItems: 'center' }}>
-                    <Button onClick={handlePrevious}>
-                        <KeyboardDoubleArrowLeftIcon />
-                    </Button>
-                    <Button onClick={handleRandom}>
-                        <ShuffleIcon />
-                    </Button>
-                    <Button onClick={handleNext}>
-                        <KeyboardDoubleArrowRightIcon />
-                    </Button>
-                </Box>
-                <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-                    <Button onClick={handlePrevious}>
-                        Previous
-                    </Button>
-                    <Button onClick={handleRandom}>
-                        Random
-                    </Button>
-                    <Button onClick={handleNext}>
-                        Next
-                    </Button>
-                </Box>
-            </ThemeProvider>
-        </>
+        <ThemeProvider theme={postFeedNavTheme}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' }, alignItems: 'center' }}>
+                <Button onClick={handlePrevious}>
+                    <KeyboardDoubleArrowLeftIcon />
+                </Button>
+                <Button onClick={handleRandom}>
+                    <ShuffleIcon />
+                </Button>
+                <Button onClick={handleNext}>
+                    <KeyboardDoubleArrowRightIcon />
+                </Button>
+            </Box>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+                <Button onClick={handlePrevious}>
+                    Previous
+                </Button>
+                <Button onClick={handleRandom}>
+                    Random
+                </Button>
+                <Button onClick={handleNext}>
+                    Next
+                </Button>
+            </Box>
+        </ThemeProvider>
     );
 }

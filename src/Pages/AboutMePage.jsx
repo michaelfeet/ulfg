@@ -7,5 +7,5 @@ export const AboutMePage = (props) => {
             <PageHeader user={props.user} handleLogOut={props.handleLogOut} loading={props.loading} setLoading={props.setLoading} />
             <AboutMeCopy />
         </>
-    )
+    );
 }

@@ -15,5 +15,5 @@ export const HomePageHeader = () => {
                 </Box>
             </Container>
         </ThemeProvider>
-    )
+    );
 }

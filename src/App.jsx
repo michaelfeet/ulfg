@@ -1,4 +1,5 @@
 import './App.css'
+import { appTheme } from './Components/themes/appTheme';
 import { useState } from 'react';
 import { ThemeProvider } from '@mui/material';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
@@ -11,7 +12,6 @@ import { ProfilePage } from './Pages/ProfilePage';
 import { AboutUlfgPage } from './Pages/AboutUlfgPage';
 import { AboutMePage } from './Pages/AboutMePage';
 import { ShowPostPage } from './Pages/ShowPostPage';
-import { appTheme } from './Components/themes/appTheme';
 
 const App = () => {
 	const navigate = useNavigate();
@@ -33,9 +33,9 @@ const App = () => {
 				<Route path='/newpost' element={<NewPost user={user} handleLogOut={handleLogOut} loading={loading} setLoading={setLoading} />} />
 				<Route path='/user/:username' element={<ProfilePage user={user} handleLogOut={handleLogOut} loading={loading} setLoading={setLoading} />} />
 				<Route path='/post/:id' element={<ShowPostPage user={user} handleLogOut={handleLogOut} loading={loading} setLoading={setLoading} />} />
-				<Route path="/*" element={<Navigate to="/signup" />} />
+				<Route path="/*" element={<Navigate to="/" />} />
 			</Routes>
 		</ThemeProvider>
-	)
+	);
 }
 export default App;

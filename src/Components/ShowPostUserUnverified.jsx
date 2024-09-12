@@ -5,7 +5,7 @@ export const ShowPostUserUnverified = (props) => {
         <>
             <Typography>
                 <Link href={`/user/${props.post.user.username}`}>
-                    more from {props.post.user.username}
+                    See more from {props.post.user.username}
                 </Link>
             </Typography>
             <ImageListItem>
