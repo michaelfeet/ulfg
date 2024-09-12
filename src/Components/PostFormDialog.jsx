@@ -47,7 +47,6 @@ export const PostFormDialog = (props) => {
             setError({ message: err });
         }
         props.setLoading(false);
-
     }
     return (
         <ThemeProvider theme={dialogTheme}>
