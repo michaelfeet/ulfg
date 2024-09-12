@@ -42,7 +42,7 @@ export const SignInForm = (props) => {
         <ThemeProvider theme={signUpSignInTheme}>
             <Container fixed maxWidth='xs'>
                 <CssBaseline />
-                <Box sx={{ mt: 16, ...outerBox }}>
+                <Box sx={{ mt: 16, mb: 20, ...outerBox }}>
                     <Typography variant='h4'>
                         Sign In
                     </Typography>
