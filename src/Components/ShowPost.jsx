@@ -1,3 +1,4 @@
+import { Box, Container, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import { Loading } from './Loading';
 import { ShowPostTernary } from './ShowPostTernary';
 import { showPostCompareTheme } from './themes/showPostCompareTheme';
