@@ -7,6 +7,7 @@ import { ShowPost } from "../Components/ShowPost";
 
 export const ShowPostPage = (props) => {
     const [post, setPost] = useState([]);
+    const [error, setError] = useState('');
     const { id } = useParams();
     const getPost = async () => {
         try {
@@ -16,7 +17,7 @@ export const ShowPostPage = (props) => {
             props.setLoading(false);
         } catch (err) {
             console.log(err);
-            props.setLoading(false);
+            setLoading(false)
         }
     }
     useEffect(() => {
@@ -25,7 +26,7 @@ export const ShowPostPage = (props) => {
     return (
         <>
             <PageHeader post={post} user={props.user} handleLogOut={props.handleLogOut} loading={props.loading} setLoading={props.setLoading} />
-            <ShowPost post={post} user={props.user} handleLogOut={props.handleLogOut} loading={props.loading} setLoading={props.setLoading} />
+            <ShowPost post={post} user={props.user} handleLogOut={props.handleLogOut} loading={props.loading} setLoading={props.setLoading} error={error} setError={setError}/>
         </>
     );
 }

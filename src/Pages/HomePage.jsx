@@ -7,14 +7,15 @@ import { HomePageHeader } from "../Components/HomePageHeader";
 export const HomePage = (props) => {
     const [posts, setPosts] = useState();
     const [postIndex, setPostIndex] = useState(0);
+
+    const fetchData = async () => {
+        props.setLoading(true);
+        const data = await postService.getPosts();
+        const postsArray = data.posts;
+        setPosts(postsArray);
+        props.setLoading(false);
+    }
     useEffect(() => {
-        const fetchData = async () => {
-            props.setLoading(true);
-            const data = await postService.getPosts();
-            const postsArray = data.posts;
-            setPosts(postsArray);
-            props.setLoading(false);
-        }
         fetchData();
     }, []);
     return (

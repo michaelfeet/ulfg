@@ -1,4 +1,3 @@
-
 import { Card, ImageListItem, ImageListItemBar, Typography, Link, CardActions, CardContent } from '@mui/material';
 import { DeleteDialog } from './DeleteDialog';
 

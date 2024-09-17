@@ -12,8 +12,7 @@ export const PostFeed = (props) => {
                 <PostFeedNav setPostIndex={props.setPostIndex} postIndex={props.postIndex} posts={props.posts} />
                 {!props.posts
                     ? <Loading loading={props.loading} />
-                    : <PostCard posts={props.posts} postIndex={props.postIndex} loading={props.loading} />
-                }
+                    : <PostCard posts={props.posts} postIndex={props.postIndex} loading={props.loading} />}
                 <PostFeedNav setPostIndex={props.setPostIndex} postIndex={props.postIndex} posts={props.posts} />
             </Box>
         </Container>

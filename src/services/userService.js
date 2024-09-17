@@ -20,6 +20,9 @@ const getProfileUser = async (username) => {
         if (dataFromServer.error) {
             throw dataFromServer.error;
         }
+        if (dataFromServer.data.length < 1) {
+            throw 'User has no posts'
+        }
         return dataFromServer;
     } catch (err) {
         throw err;

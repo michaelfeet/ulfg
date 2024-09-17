@@ -9,18 +9,17 @@ export const ShowPost = (props) => {
         <ThemeProvider theme={showPostCompareTheme}>
             <CssBaseline />
             {!props.post
-                    ? <Typography variant='h3' sx={{ pt: 7 }}>
-                        Post Not Found
-                    </Typography>
-                    : <Container fixed maxWidth='xl'>
-                        <Box sx={{ mt: 6, mb: 10, ...outerBox }}>
-                            {!props.post.user
-                                ? <Loading loading={props.loading} />
-                                : <ShowPostTernary post={props.post} user={props.user} />
-                            }
-                        </Box>
-                    </Container>
-            }
+                ? <Typography variant='h3' sx={{ pt: 7 }}>
+                    Post Not Found
+                </Typography>
+                : <Container fixed maxWidth='xl'>
+                    <Box sx={{ mt: 6, mb: 10, ...outerBox }}>
+                        {!props.post.user
+                            ? <Loading loading={props.loading} />
+                            : <ShowPostTernary post={props.post} user={props.user} />
+                        }
+                    </Box>
+                </Container>}
         </ThemeProvider>
     );
 }

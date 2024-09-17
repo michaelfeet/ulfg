@@ -6,8 +6,7 @@ export const PageHeaderUserOrSignIn = (props) => {
         <>
             {props.user
                 ? <PageHeaderUserLoggedIn user={props.user} handleLogOut={props.handleLogOut} />
-                : <PageHeaderUserLoggedOut />
-            }
+                : <PageHeaderUserLoggedOut />}
         </>
     );
 }

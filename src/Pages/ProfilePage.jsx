@@ -7,6 +7,7 @@ import { ProfileFeed } from "../Components/ProfileFeed";
 export const ProfilePage = (props) => {
     const [posts, setPosts] = useState([]);
     const [profileUser, setProfileUser] = useState({});
+    const [error, setError] = useState('')
     const { username } = useParams();
     const getProfile = async () => {
         try {
@@ -16,6 +17,7 @@ export const ProfilePage = (props) => {
             props.setLoading(false);
         } catch (err) {
             console.log(err);
+            setError(err)
             props.setLoading(false);
         }
     }
@@ -25,7 +27,7 @@ export const ProfilePage = (props) => {
     return (
         <>
             <PageHeader user={props.user} handleLogOut={props.handleLogOut} loading={props.loading} setLoading={props.setLoading} />
-            <ProfileFeed user={props.user} posts={posts} setPosts={setPosts} profileUser={profileUser} setProfileUser={setProfileUser} setLoading={props.setLoading} loading={props.loading} />
+            <ProfileFeed user={props.user} posts={posts} setPosts={setPosts} profileUser={profileUser} setProfileUser={setProfileUser} setLoading={props.setLoading} loading={props.loading} error={error} />
         </>
     );
 }

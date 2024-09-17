@@ -43,6 +43,7 @@ const getOnePost = async(postId) =>{
         return dataFromServer;
     }catch(err) {
         console.log(err);
+        throw err;
     }
 }
 
