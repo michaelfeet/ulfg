@@ -1,15 +1,17 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { showPostCompareTheme } from './themes/showPostCompareTheme';
-import { ErrorMessage } from './ErrorMessage';
-import { ShowPostCard } from './ShowPostCard';
+import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Link } from "react-router-dom";
 
-export const ShowPost = (props) => {
+export const ProfileFeedImageList = (props) => {
     return (
-        <ThemeProvider theme={showPostCompareTheme}>
-            <CssBaseline />
-            {!props.post
-                ? <ErrorMessage error={'Post not found'} />
-                : <ShowPostCard post={props.post} user={props.user} loading={props.loading} setLoading={props.setLoading} />}
-        </ThemeProvider>
+        <ImageList cols={1}>
+            {props.posts.map((post) => (
+                <Link to={`/post/${post._id}`} key={post.photoUrl}>
+                    <ImageListItem sx={{ pt: 7.5, mb: 5 }}>
+                        <img srcSet={`${post.photoUrl}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`} src={`${post.photoUrl}?w=164&h=164&fit=crop&auto=format`} alt={post.title} loading="lazy" />
+                        <ImageListItemBar title={post.title} subtitle={<span>by: {post.user.username}</span>} position="top" />
+                    </ImageListItem>
+                </Link>
+            ))}
+        </ImageList>
     );
 }
