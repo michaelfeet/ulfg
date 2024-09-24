@@ -1,8 +1,6 @@
-# React + Vite
+## The Unfortunate Life of a Genius You've Never Heard Of
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An app build for a friend to showcase comic panels documenting the nuances of life. See what others are posting and submit your own.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### [ULFG on Render](https://ulfg.onrender.com/)
+![Imgur](https://imgur.com/a/nSuHMbp)
