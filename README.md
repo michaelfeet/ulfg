@@ -4,3 +4,15 @@ An app build for a friend to showcase comic panels documenting the nuances of li
 
 ### [ULFG on Render](https://ulfg.onrender.com/)
 ![Imgur](https://i.imgur.com/dYbF4ro.png)
+
+## Technologies Used
+- JavaScript
+- Node.js
+- Express
+- MongoDB
+- React
+- Material UI
+  
+## Future Development
+- Complete styling to make the application more attractive and include mobile responsiveness.
+- Add Comment feature
